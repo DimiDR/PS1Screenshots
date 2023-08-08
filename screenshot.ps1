@@ -1,7 +1,7 @@
-$path = ".../Screenshots/Images/" # change the path where the screenshots are saved
+$path = "C:\...\Screenshots\Images\" #***change the path
 $fileName = "Test"
  $i = 0
- for ($i=0; $i -le 6){ #change number of repetitions (6=1Min for 10sec sleep)
+ for ($i=0; $i -le 6){ #***change number of repetitions (6=1Min for 10sec sleep)
     $date = Get-Date -Format yyyyMMdd-hhmm
     $file = $path + $i +".bmp" 
     Add-Type -AssemblyName System.Windows.Forms
@@ -20,6 +20,6 @@ $fileName = "Test"
     $graphic.CopyFromScreen($Left, $Top, 0, 0, $bitmap.Size)
     # Save to file
     $bitmap.Save($File)
-    sleep 1 #change number of secconds
+    sleep 10 #***change number of secconds
     $i++
  }
